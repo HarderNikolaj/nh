@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+*{
+  outline: 0 !important;
+}
+
+div{
+  background-color: grayscale($color: beige);
+  box-sizing: border-box;
+}
+
+ul li{
+  list-style: circle;
+}
+
+.icon-sm{
+  width: 1.5em;
+  height: 1.5em;
+}

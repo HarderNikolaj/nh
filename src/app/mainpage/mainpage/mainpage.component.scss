@@ -1,0 +1,14 @@
+
+
+#mainpageWrap{
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px){
+  #mainpage-content{
+    height: 75vh;
+
+  }
+}
+

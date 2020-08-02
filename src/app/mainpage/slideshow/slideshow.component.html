@@ -1,0 +1,11 @@
+<ngb-carousel
+  *ngIf="images"
+  [showNavigationArrows]="showNavigationArrows"
+  [showNavigationIndicators]="showNavigationIndicators"
+  interval="0">
+  <ng-template ngbSlide *ngFor="let image of images">
+    <div >
+      <img class="rounded mx-auto d-block" [src]="image" alt="Image not found">
+    </div>
+  </ng-template>
+</ngb-carousel>

@@ -1,0 +1,14 @@
+
+
+.navbar-brand{
+  width: auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px){
+  #lower-navbar{
+    display: none;
+  }
+}

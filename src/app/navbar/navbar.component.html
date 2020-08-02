@@ -1,0 +1,25 @@
+<!-- Øvre bar -->
+<nav class="navbar fixed-top navbar-expand navbar-dark bg-dark">
+  <a class="navbar-brand" href="jobsogning\hjem">
+    NH
+  </a>
+
+  <ul class="navbar-nav mr-auto">
+    <li [ngClass]="{active: toActivate==='hjem'}" class="nav-item">
+      <a class="nav-link" href="jobsogning\hjem">Hjem</a>
+    </li>
+    <li [ngClass]="{active: toActivate==='cv'}" class="nav-item">
+      <a class="nav-link" href="jobsogning\cv">CV</a>
+    </li>
+    <li [ngClass]="{active: toActivate==='kontakt'}" class="nav-item">
+      <a class="nav-link" href="jobsogning\kontakt">Kontakt</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Nedre bar -->
+<nav id="lower-navbar" class="navbar fixed-bottom navbar-expand navbar-dark bg-dark ">
+    <p class="navbar-text mx-auto">Lavet med Angular og Bootstrap</p>
+    <p class="navbar-text float-right">Nikolaj Harder</p>
+
+  </nav>
