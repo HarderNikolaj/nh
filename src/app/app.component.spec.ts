@@ -1,5 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
+import { ElementRef } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
+
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -26,10 +28,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('nh');
   });
 
-  it('should render title', () => {
+  it('should have outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('nh app is running!');
+    const compiled: HTMLElement = fixture.nativeElement;
+    expect(compiled.querySelector('router-outlet')).toBeDefined(true);
   });
 });
