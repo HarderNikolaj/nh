@@ -16,9 +16,11 @@ import { MainpageModule } from './mainpage/mainpage.module';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    MainpageModule
+    MainpageModule,
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

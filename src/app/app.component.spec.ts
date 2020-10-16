@@ -1,17 +1,23 @@
 import { TestBed, async } from '@angular/core/testing';
-import { ElementRef } from '@angular/core';
+import { ElementRef, Component } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  @Component({
+    selector: 'app-navbar',
+    template: '<div></div>'
+  })
+  class ScrollbarComponent{}
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, ScrollbarComponent
       ],
     }).compileComponents();
   }));
@@ -31,7 +37,7 @@ describe('AppComponent', () => {
   it('should have outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled: HTMLElement = fixture.nativeElement;
-    expect(compiled.querySelector('router-outlet')).toBeDefined(true);
+    const compiledHTML: HTMLElement = fixture.nativeElement;
+    expect(compiledHTML.querySelector('router-outlet')).toBeDefined(true);
   });
 });

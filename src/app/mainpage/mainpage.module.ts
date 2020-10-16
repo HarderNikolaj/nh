@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { WelcomeTextComponent } from './welcome-text/welcome-text.component';
 import { CvComponent } from './cv/cv.component';
 import { routes } from './mainpage-routing.module';
-import { NgScrollbarModule } from 'ngx-scrollbar';
+import { NgScrollbarModule, NG_SCROLLBAR_OPTIONS } from 'ngx-scrollbar';
 import { KontaktComponent } from './kontakt/kontakt.component';
 
 @NgModule({
@@ -24,6 +24,14 @@ import { KontaktComponent } from './kontakt/kontakt.component';
     NgbModule,
     NgScrollbarModule,
     NgbTooltipModule
+  ],
+  providers: [
+    {
+      provide: NG_SCROLLBAR_OPTIONS,
+      useValue: {
+        scrollAuditTime: 20
+      }
+    }
   ]
 })
 export class MainpageModule { }

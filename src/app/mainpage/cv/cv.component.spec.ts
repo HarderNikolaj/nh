@@ -1,14 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CvComponent } from './cv.component';
+import { Component } from '@angular/core';
 
 describe('CvComponent', () => {
   let component: CvComponent;
   let fixture: ComponentFixture<CvComponent>;
 
+  @Component({
+    selector: 'ng-scrollbar',
+    template: '<div></div>'
+
+  })
+  class ScrollbarCompenent{}
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CvComponent ]
+      declarations: [ CvComponent, ScrollbarCompenent ]
     })
     .compileComponents();
   }));
